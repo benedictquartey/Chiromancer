@@ -1,3 +1,4 @@
+#adapted from PyimageSearch for testing accuracy between my standard NN_model architecture and a popular model
 
 # set the matplotlib backend so figures can be saved in the background
 import matplotlib
