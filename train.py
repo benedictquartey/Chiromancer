@@ -1,10 +1,5 @@
 
 # @Author Benedict Quartey
-# Hand Detection Code
-# Implements Background subtraction, thresholding, contours and Motion detection
-# NB. Used OpenCV and Keras Documentation as well as Machine Learning forums for help with code syntax and best practices.
-
-# Multi Class Image Classifier Neural Network Model
 
 import matplotlib.pyplot as plt
 import numpy as np #matrix math
@@ -20,7 +15,7 @@ import os
 
 
 batch_size = 128
-#10 different characters
+
 num_classes = 6
 epochs = 10
 
@@ -83,20 +78,20 @@ def train():
 
 
 
-	#Adaptive learning rate (adaDelta) is a popular form of gradient descent rivaled only by adam and adagrad
-	#categorical ce since we have multiple classes (10) 
+	#Adaptive learning rate (adaDelta) is a popular form of gradient descent 
+	#categorical cross entropy since we have multiple classes (10) 
 	model.compile(loss=keras.losses.categorical_crossentropy,
 				  optimizer=keras.optimizers.Adadelta(),
 				  metrics=['accuracy'])
 
-	#train that ish!
+	#train!
 	history=model.fit(x_train, y_train,
 			  batch_size=batch_size,
 			  epochs=epochs,
 			  verbose=1,
 			  validation_data=(x_test, y_test),
 			  callbacks=interimModelPoint)
-	 #how well did it do? 
+	 #performance evaluation 
 	score = model.evaluate(x_test, y_test, verbose=0)
 	print('Test loss:', score[0])
 	print('Test accuracy:', score[1])
