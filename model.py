@@ -34,9 +34,9 @@ def nn_model():
     model.add(Flatten())
 	#fully connected to get all relevant data
     model.add(Dense(128, activation='relu'))
-	#one more dropout for convergence' sake :)  
+	#one more dropout   
     model.add(Dropout(0.5))
-	#output a softmax to squash the matrix into output probabilities
+	#output a softmax to transform the matrix into output probabilities
     model.add(Dense(num_classes, activation='softmax'))
 
     return model
@@ -52,7 +52,7 @@ def build_model_from_json():
     loaded_model_json = json_file.read()
     json_file.close()
     loaded_model = model_from_json(loaded_model_json)
-	#load woeights into new model
+	#load weights into new model
     loaded_model.load_weights("model.h5")  
 
 
