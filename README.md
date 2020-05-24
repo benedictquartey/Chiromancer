@@ -17,7 +17,7 @@ Contributions are welcome and enccouraged, create a pull request to submit contr
 
 * **Benedict Quartey** 
 
-Kindly acknowledge the creator when using all or any section of the code/design. If you have any inquiries or need any help, shoot me an email at benedict.quartey@ashesi.edu.gh
+Kindly acknowledge the creator when using all or any section of the code/design. If you have any inquiries or need any help, shoot me an email at benedict.quartey@hotmail.com || benedict.quartey@alumni.ashesi.edu.gh
 
 ## License
 This project is licensed under the MIT License. Refer to the LICENSE file for details
